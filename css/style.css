@@ -101,8 +101,8 @@ body {
 	font-weight: 400;
 	color: #333;
 	
-	padding-left: clamp(12px, 4vw, 100px);
-	padding-right: clamp(12px, 4vw, 100px);
+	padding-left: 0;
+	padding-right: 0;
 	overflow-x: hidden;
 
 }
@@ -110,6 +110,13 @@ body {
 @media (min-width: 992px) {
 	body {
 		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1600px) {
+	body {
+		padding-left: clamp(20px, 2.5vw, 60px);
+		padding-right: clamp(20px, 2.5vw, 60px);
 	}
 }
 
@@ -3964,7 +3971,7 @@ html .row-70 > * {
 
 @media (min-width: 992px) {
 	.object-wrap__body-sizing-1 {
-		width: 41vw;
+		width: min(46vw, 860px);
 	}
 }
 
@@ -12135,5 +12142,17 @@ html, body {
 @media (max-width: 767.98px) {
 	body {
 		line-height: 1.8;
+	}
+
+	.isotope-filters .inline-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px 14px;
+		transform: none;
+	}
+
+	.isotope-filters .inline-list li {
+		margin-top: 0;
 	}
 }

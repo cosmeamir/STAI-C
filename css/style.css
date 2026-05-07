@@ -101,8 +101,9 @@ body {
 	font-weight: 400;
 	color: #333;
 	
-	padding-left: 100px; /* espaço à esquerda */
-  padding-right: 100px; /* espaço à direita */
+	padding-left: clamp(12px, 4vw, 100px);
+	padding-right: clamp(12px, 4vw, 100px);
+	overflow-x: hidden;
 
 }
 
@@ -12118,4 +12119,21 @@ img {
   font-size: 13px;
   line-height: 1.7;
   color: #fff;
+}
+
+/* Responsive global adjustments */
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.site-wrapper,
+.page {
+	width: 100%;
+}
+
+@media (max-width: 767.98px) {
+	body {
+		line-height: 1.8;
+	}
 }

@@ -3975,6 +3975,27 @@ html .row-70 > * {
 	}
 }
 
+/* Keep about text readable on wide screens when side image is absolutely positioned */
+#about .col-lg-5 {
+	position: relative;
+	z-index: 2;
+	background-color: rgba(248, 248, 248, 0.96);
+	padding: 28px 26px;
+}
+
+@media (min-width: 1200px) {
+	#about .col-lg-5 {
+		padding: 36px 34px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	#about .col-lg-5 {
+		background-color: transparent;
+		padding: 0;
+	}
+}
+
 .gallery-wrap {
 	margin-bottom: -10px;
 }
